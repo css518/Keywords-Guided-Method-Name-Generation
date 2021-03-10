@@ -20,10 +20,6 @@ Then, run the keywords extractor to predict the keywords of each code snippet.
 python train_and_eval.py --node_vocab_file ../dataset/node_5.vocab --edge_vocab_file ../dataset/edge.vocab --target_vocab_file ../dataset/output_5.vocab --model_name hybrid_fix_2 --checkpoint_dir hybrid_fix_2 --node_features_dropout 0.0 --embeddings_dropout 0.2 --batch_size 16 --seed 2020 --infer_source_file ../snm_key_data/test/hybrid_3_inputs.jsonl.gz --infer_predictions_file save_data_kggen.json
 
 ~~~
-Finally, align the predicted keywords with the original code snippet to get the dataset used for method name generation.
-~~~
-sh run_extractor,sh
-~~~
 Of course, you can download the processed [method name generation dataset](), instead of retraining a keywords extractor.
 
 ### run the KG-MNGen
